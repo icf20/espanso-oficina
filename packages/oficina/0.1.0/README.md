@@ -15,5 +15,4 @@ si dejas package.yml en la carpeta ```/match/packages/oficina/package.yml``` te 
 
 # Todo
 - CV
-- Presupuestos
 - pedidos
