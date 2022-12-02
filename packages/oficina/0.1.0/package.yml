@@ -1,0 +1,70 @@
+matches:
+  - trigger: ":factura"
+    replace: "{{factura}}"
+    vars:
+      - name: factura
+        type: random
+        params:
+# al poner \n va a una nueva linea
+          choices:
+            - "Estimado [nombre del destinatario],\n
+Adjunto encontrará la factura correspondiente a la fecha [fecha de la factura]. Si tiene alguna pregunta o necesita más información, no dude en ponerse en contacto conmigo.\n
+Atentamente,\n
+[Su nombre]\n
+[Su dirección de contacto]"
+            - "Estimado [nombre del destinatario],\n
+Le enviamos la factura correspondiente a su pedido del [fecha del pedido]. El monto total de la factura es de [monto total] y incluye [número de items facturados].\n
+Le agradecemos por su negocio y esperamos seguir siendo su proveedor de [productos o servicios que ofrece su empresa]. Como agradecimiento, le ofrecemos un descuento del [porcentaje de descuento] en su próximo pedido.
+Le pedimos por favor que realice el pago de la factura antes del [fecha límite para el pago]. Preferimos recibir el pago por transferencia bancaria a la siguiente cuenta: [información de la cuenta bancaria].
+Si tiene alguna pregunta o necesita más información, no dude en ponerse en contacto con nosotros.
+Atentamente,\n
+[Su nombre]\n
+[Su dirección de contacto]"
+            - "Hola [nombre del destinatario],\n
+Adjunto encontrará la factura [número de factura] correspondiente al trabajo realizado en [fecha del trabajo]. Si tiene alguna pregunta o necesita más información, no dude en ponerse en contacto conmigo.
+Saludos,\n
+[Su nombre]\n
+[Su dirección de contacto]"
+            - "Buenos días [nombre del destinatario],\n
+Adjunto encontrará la factura [número de factura] por los productos y/o servicios que le suministramos el [fecha de la factura]. Si tiene alguna pregunta o necesita más información, no dude en ponerse en contacto conmigo.
+Atentamente,\n
+[Su nombre]\n
+[Su dirección de contacto]"
+  - trigger: ":borrador"
+    replace: "{{borrador}}"
+    vars:
+      - name: borrador
+        type: random
+        params:
+          choices:
+            - "Estimado [nombre del destinatario],\n
+Adjunto encontrará un borrador de la factura correspondiente a la fecha [fecha de la factura]. Le agradeceríamos si pudiera revisarlo y aprobarlo, y nos informara de cualquier cambio que considere necesario.
+Atentamente,\n
+[Su nombre]\n
+[Su dirección de contacto]"
+            - "Estimado [nombre del destinatario],\n
+Adjunto encontrará un borrador de la factura correspondiente a la fecha [fecha de la factura]. Aún no se ha emitido la factura definitiva, por lo que si tiene algún cambio o corrección que hacer, por favor háganoslo saber.
+Atentamente,\n
+[Su nombre]\n
+[Su dirección de contacto]"
+            - "Estimado [nombre del destinatario],\n
+Adjunto encontrará un borrador de la factura correspondiente a la fecha [fecha de la factura]. Este borrador puede sufrir cambios antes de ser enviado definitivamente, por lo que le agradeceríamos que lo revise y nos informe de cualquier error o problema que encuentre.
+Atentamente,\n
+[Su nombre]\n
+[Su dirección de contacto]"
+            - "Estimado [nombre del destinatario],\n
+Le enviamos el borrador de la factura correspondiente a la fecha [fecha de la factura]. Por favor, revise el borrador y háganos saber si tiene algún comentario o sugerencia. Si tiene algún problema al descargar el archivo o si necesita más información, no dude en ponerse en contacto con nosotros.
+Atentamente,\n
+[Su nombre]\n
+[Su dirección de contacto]"
+  - trigger: ":presupuesto"
+    replace: "{{presupuesto}}"
+    vars:
+      - name: presupuesto
+        type: random
+        params:
+          choices:
+            - "Estimado [nombre del destinatario],\nMe gustaría solicitar un presupuesto para [descripción del producto o servicio]. Si es posible, me gustaría que incluyera información detallada sobre las especificaciones del producto, así como el precio y la forma de pago. También me gustaría saber si ofrecen descuentos por compras en cantidad o si tienen algún tipo de garantía o servicio postventa.\nSi necesita más información, no dude en ponerse en contacto conmigo.\nAtentamente,\n[Su nombre]\n[Su dirección de contacto]"
+            - "Hola [nombre del destinatario],\nMe gustaría saber si podría proporcionarme un presupuesto para [descripción del producto o servicio]. Si es posible, me gustaría que incluyera información detallada sobre el precio, la forma de pago y el plazo de entrega. También me gustaría saber si ofrecen opciones de personalización o si tienen algún tipo de descuento por volumen de compra.\nSi necesita más información o si tiene alguna pregunta, no dude en ponerse en contacto conmigo.\nSaludos,\n[Su nombre]\n[Su dirección de contacto]"
+            - "Buenos días [nombre del destinatario],\nEstamos interesados en adquirir [descripción del producto o servicio] y nos gustaría saber si podría enviarnos un presupuesto. Si es posible, nos gustaría recibir información detallada sobre las especificaciones del producto, así como el precio y la forma de pago. También nos gustaría saber si ofrecen descuentos por compras en cantidad o si tienen algún tipo de garantía o servicio postventa.\nSi necesita más información o si tiene alguna pregunta, no dude en ponerse en contacto conmigo.\nAtentamente,\n[Su nombre]\n[Su dirección de contacto]"
+            - "Hola [nombre del destinatario],\nEstoy interesado en [descripción del producto o servicio] y me gustaría saber si podría enviarme un presupuesto. Si es posible, me gustaría que incluyera información sobre las opciones disponibles, el precio y la forma de pago. También me gustaría saber si ofrecen descuentos por cantidad o si tienen algún tipo de garantía o servicio postventa.\nSi necesita más información, no dude en contactarme.\nSaludos,\n[Su nombre]\n[Su dirección de contacto]"

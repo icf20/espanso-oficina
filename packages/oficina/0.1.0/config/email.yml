@@ -1,0 +1,10 @@
+# esto es para que espanso funccione solo con el email
+# en este ejemplo es para gmial pero deberías poner la pagina web que tu usas
+# es posible que necesites https://chrome.google.com/webstore/detail/url-in-title/ignpacbgnbnkaiooknalneoeladjnfgb para tener el URL en al ventana
+# si usas un programa como thunderbird puedes quitar filter_title y usar filter_class
+filter_title: https://mail.google.com
+# en este ejemplo esta puesto opera suponiendo que se usa el navegador opera para enviar los email
+filter_class: Opera
+# esto es para que cargue el "package"
+extra_includes:
+  - "../match/_oficina.yml"
